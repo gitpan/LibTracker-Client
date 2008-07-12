@@ -18,4 +18,5 @@ fallback/const-c.inc
 fallback/const-xs.inc
 lib/LibTracker/Client.pm
 lib/LibTracker/Client/MetaDataTypeDetails.pm
+inc/Devel/CheckLib.pm
 META.yml                                 Module meta-data (added by MakeMaker)

@@ -1,5 +1,14 @@
 use 5.008008;
 use ExtUtils::MakeMaker;
+
+# experimental - check for dependencies.
+# tip from http://cpantest.grango.org/wiki/CPANAuthorNotes
+# via 'imacat <imacat@mail.imacat.idv.tw>'
+use lib 'inc';
+use Devel::CheckLib;
+check_lib_or_exit( lib => [ 'trackerclient', 'glib-2.0', 'dbus-glib-1' ],
+		headers => [ 'tracker-client.h', 'tracker.h' ] );
+
 # See lib/ExtUtils/MakeMaker.pm for details of how to influence
 # the contents of the Makefile that is written.
 WriteMakefile(
